@@ -1,7 +1,7 @@
 # springbootStudy
 spring-boot学习
 
-##Helloword
+## Helloword
 1. 创建一个spring-boot项目
 2. 配置热部署，在pom.xml中添加
 ```
