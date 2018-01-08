@@ -45,6 +45,8 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<!--在继承时，是否是可选的；如果值为true则子项目中必须显示依赖该jar包才可以；
+				如果为false，无需子项目显示依赖-->
 			<optional>true</optional>
 			<!--<scope>true</scope>-->
 		</dependency>
