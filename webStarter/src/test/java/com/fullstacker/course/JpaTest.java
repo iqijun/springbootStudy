@@ -14,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class JpaTest  {
     @Autowired
     private UserRespository userRespository;
 
-    @Autowired
+    @Resource
     private UserDetailRepository userDetailRepository;
 
     @Test
@@ -44,7 +45,7 @@ public class JpaTest  {
         user1.setEmail("xg1s@foxmcom");
         user1.setPassWord("x19399");
         user1.setRegTime("2010-12-20");
-        userRespository.save(user1);
+//        userRespository.save(user1);
     }
 
     @Test
@@ -69,7 +70,9 @@ public class JpaTest  {
 
     @Test
     public  void testMutilTable(){
-        List<UserInfo> all = userDetailRepository.findUserInfo("123");
-
+        List<UserInfo> userInfos = userDetailRepository.findUserInfo("123");
+        for (UserInfo userInfo:userInfos){
+            System.out.println("addree: "+userInfo.getAddress());
+        }
     }
 }
