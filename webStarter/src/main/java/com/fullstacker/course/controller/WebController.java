@@ -19,7 +19,7 @@ public class WebController {
     public User findUser(User user){
         user.setAge(10);
         user.setName("tomcat");
-        user.setPass("1234");
+//        user.setPass("1234");
         return  user;
     }
 
