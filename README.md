@@ -46,3 +46,9 @@ Pageable pageable = new PageRequest(page, size, sort);
 ```
 4. 分页查询时建议使用Pageable参数作为方法的最后一个参数
 5. 
+
+## 零散知识点
+1. ModelAttribute注解的使用，代码见：
+```
+com.fullstacker.course.controller.ModelAttrController
+```
