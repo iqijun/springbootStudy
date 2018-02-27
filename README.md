@@ -52,3 +52,8 @@ Pageable pageable = new PageRequest(page, size, sort);
 ```
 com.fullstacker.course.controller.ModelAttrController
 ```
+2. ExceptionHandler注解使用,代码见
+
+```
+com.fullstacker.course.controller.ExceptionHandlerController
+```
