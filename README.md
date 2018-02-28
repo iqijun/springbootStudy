@@ -33,6 +33,7 @@ spring-boot学习
 2. 利用@Configuration注解声明一个filter
 3. 利用@Value注解获取properties中的值
 4. 利用@RunWith(SpringRunner.class)进行单元测试
+5. 自定义一个filter 参考com.fullstacker.course.configuration.WebConfiguration
 
 
 ## JPA
@@ -45,4 +46,9 @@ Sort sort = new Sort(Sort.Direction.DESC, "id");
 Pageable pageable = new PageRequest(page, size, sort);
 ```
 4. 分页查询时建议使用Pageable参数作为方法的最后一个参数
-5. 
+5. 多表查询有两种方式：
+    1.  利用 hibernate 的级联查询来实现
+    2.  创建一个结果集的接口来接收连表查询后的结果 见[示例](./webStarter/src/test/java/com/fullstacker/course/JpaTest.java) 其结果集为接口UserInfo而不是实体类
+
+## ThymeLeaf
+1. ThymeLeaf示例 com.fullstacker.course.controller.ThymeLeafController
