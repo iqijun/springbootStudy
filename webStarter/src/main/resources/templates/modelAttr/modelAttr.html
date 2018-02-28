@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>modelAttr</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2">modelAttr</td>
+    </tr>
+    <tr>
+        <td>ID：</td>
+        <td th:text="${attrName.id}"></td>
+    </tr>
+    <tr>
+        <td>年龄：</td>
+        <td th:text="${attrName.age}"></td>
+    </tr>
+    <tr>
+        <td>姓名：</td>
+        <td th:text="${attrName.name}"></td>
+    </tr>
+    <tr>
+        <td>address：</td>
+        <td th:text="${userDetail.address}"></td>
+    </tr>
+    <tr>
+        <td>hobby：</td>
+        <td th:text="${userDetail.hobby}"></td>
+    </tr>
+</table>
+</body>
+</html>

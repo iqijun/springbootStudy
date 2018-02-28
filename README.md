@@ -52,3 +52,15 @@ Pageable pageable = new PageRequest(page, size, sort);
 
 ## ThymeLeaf
 1. ThymeLeaf示例 com.fullstacker.course.controller.ThymeLeafController
+
+
+## 零散知识点
+1. ModelAttribute注解的使用，代码见：
+```
+com.fullstacker.course.controller.ModelAttrController
+```
+2. ExceptionHandler注解使用,代码见
+
+```
+com.fullstacker.course.controller.ExceptionHandlerController
+```

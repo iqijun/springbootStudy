@@ -16,6 +16,11 @@ import java.util.List;
 
 public interface UserRespository extends JpaRepository<User,Long>{
 
+    @Query("select u from User u")
+    Page<User> findList(Pageable pageable);
+
+    User findById(long id);
+
     User findByName(String userName);
     User findByNameOrEmail(String username, String email);
     List<User> findByEmailLike(String email);
