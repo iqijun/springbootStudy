@@ -53,6 +53,8 @@ Pageable pageable = new PageRequest(page, size, sort);
 ## ThymeLeaf
 1. ThymeLeaf示例 com.fullstacker.course.controller.ThymeLeafController
 
+##  druid多数据源
+1. 项目位于druidStudy中，主要配置在com.fullstacker.course.config包下
 
 ## 零散知识点
 1. ModelAttribute注解的使用，代码见：
