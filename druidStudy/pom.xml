@@ -6,7 +6,7 @@
 	<groupId>com.fullstacker.course</groupId>
 	<artifactId>druidstudy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>druidStudy</name>
 	<description>druid学习项目</description>
@@ -22,9 +22,20 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.7</java.version>
+		<!--<java.version>1.7</java.version>-->
+		<!-- maven方式跳过maven test, 等同$ mvn package -Dmaven.test.skip=true -->
+		<!-- <maven.test.skip>true</maven.test.skip> -->
+		<!-- surefire plugin方式跳过maven test， 等同$ mvn package -DskipTests -->
+		<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
+		<!--添加web支持-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
@@ -34,7 +45,6 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -48,6 +58,25 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.5</version>
 		</dependency>
+
+
+		<!--热部署工具-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<!--<scope>true</scope>-->
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -55,6 +84,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
